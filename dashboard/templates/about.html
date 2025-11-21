@@ -1,0 +1,74 @@
+
+<style>
+    .hakkimizda {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        padding: 5%;
+    }
+
+    .hakki-sol {
+        flex: 2;
+    }
+
+    .hakki-sol h2 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #2f2f2f;
+    }
+
+    .hakki-sol p {
+        font-size: 17px;
+        color: #000000;
+        line-height: 1.7;
+    }
+
+    .hakki-sag {
+        flex: 1;
+    }
+
+    .hakki-sag img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 768px) {
+        .hakkimizda {
+            flex-direction: column;
+        }
+
+        .hakki-sag {
+            display: none;
+        }
+
+        .hakki-sol h2 {
+            font-size: 26px;
+        }
+
+        .hakki-sol p {
+            font-size: 16px;
+        }
+    }
+</style>
+
+
+<section class="hakkimizda">
+    <div class="hakki-sol">
+        <h2>Hakkımızda</h2>
+
+        <p>
+            Sitemiz; güncel haberleri, duyuruları ve önemli gelişmeleri hızlı, sade ve 
+            güvenilir bir şekilde sunmak amacıyla kurulmuş modern bir blog – duyuru platformudur. 
+            Amacımız; kullanıcılarımıza temiz, düzenli ve erişilebilir içerikler sunarak 
+            bilgiye ulaşmayı kolaylaştırmak.
+        </p>
+    </div>
+
+    <div class="hakki-sag">
+        <img src="img/about.png" alt="about img">
+    </div>
+</section>
