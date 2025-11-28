@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'panel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'diana',
-        'USER': 'diana',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'diana_db',
+        'USER': 'postgres',
+        'PASSWORD': 'diana1903',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
