@@ -3,11 +3,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from dashboard.views import anasayfa   
+from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', anasayfa, name='anasayfa'), 
+    path('', views.anasayfa, name='anasayfa'),
 ]
 
 if settings.DEBUG:

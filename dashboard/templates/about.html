@@ -1,7 +1,6 @@
-
 <style>
     .hakkimizda {
-        width: 100%;
+        width: 90%;
         display: flex;
         gap: 30px;
         align-items: flex-start;
@@ -55,20 +54,24 @@
     }
 </style>
 
+{% for i in icerikler %}
+    {% if i.title == "about" %}
+        <section class="hakkimizda">
+            <div class="hakki-sol">
+                {# Başlık: admin'deki Url alanını gösteriyoruz (ör: "Hakkımızda") #}
+                <h2>{{ i.url }}</h2>
 
-<section class="hakkimizda">
-    <div class="hakki-sol">
-        <h2>Hakkımızda</h2>
+                {# Paragraf: admin'deki Text alanı #}
+                <p>
+                    {{ i.text }}
+                </p>
+            </div>
 
-        <p>
-            Sitemiz; güncel haberleri, duyuruları ve önemli gelişmeleri hızlı, sade ve 
-            güvenilir bir şekilde sunmak amacıyla kurulmuş modern bir blog – duyuru platformudur. 
-            Amacımız; kullanıcılarımıza temiz, düzenli ve erişilebilir içerikler sunarak 
-            bilgiye ulaşmayı kolaylaştırmak.
-        </p>
-    </div>
-
-    <div class="hakki-sag">
-        <img src="templates/img/about.png" alt="about img">
-    </div>
-</section>
+            <div class="hakki-sag">
+                {% if i.img %}
+                    <img src="{{ i.img.url }}" alt="{{ i.url }}">
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
+{% endfor %}
